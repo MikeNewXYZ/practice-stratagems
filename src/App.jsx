@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import { tinykeys } from "tinykeys";
+import { useLocalStorage } from "@uidotdev/usehooks";
 import stratagemConfig from "./config/stratagems.json";
 import Header from "./components/Header";
 import GameArea from "./components/GameArea";
-
-const controlMap = {
-	up: "Control+ArrowUp",
-	down: "Control+ArrowDown",
-	left: "Control+ArrowLeft",
-	right: "Control+ArrowRight",
-};
 
 const randomStratagem = (stratagems) => {
 	const randomIndex = Math.floor(Math.random() * stratagems.length);
@@ -25,6 +19,24 @@ const randomStratagem = (stratagems) => {
 };
 
 function App() {
+	const [settings, saveSettings] = useLocalStorage("settings", {
+		general: {
+			stratagems: {
+				helldiversOne: false,
+				helldiversTwo: true,
+				random: false,
+			},
+			radio: false,
+			audio: false,
+		},
+		controls: {
+			up: "KeyW",
+			down: "KeyS",
+			left: "KeyA",
+			right: "KeyD",
+			radio: "Control",
+		},
+	});
 	const [inputCodeIndex, setInputCodeIndex] = useState(0);
 	const [stratagems, setStratagems] = useState(
 		[...Array(10)].map(() =>
@@ -72,18 +84,48 @@ function App() {
 	};
 
 	useEffect(() => {
+		// Map controls based on user settings.
+		const { general, controls } = settings;
+		const controlMap = {
+			up: general.radio ? `${controls.radio}+${controls.up}` : controls.up,
+
+			down: general.radio
+				? `${controls.radio}+${controls.down}`
+				: controls.down,
+
+			left: general.radio
+				? `${controls.radio}+${controls.left}`
+				: controls.left,
+
+			right: general.radio
+				? `${controls.radio}+${controls.right}`
+				: controls.right,
+		};
+
 		const unsubscribe = tinykeys(window, {
-			[controlMap.up]: () => cycleStratagems("UP"),
-			[controlMap.down]: () => cycleStratagems("DOWN"),
-			[controlMap.left]: () => cycleStratagems("LEFT"),
-			[controlMap.right]: () => cycleStratagems("RIGHT"),
+			[controlMap.up]: (event) => {
+				event.preventDefault();
+				cycleStratagems("UP");
+			},
+			[controlMap.down]: (event) => {
+				event.preventDefault();
+				cycleStratagems("DOWN");
+			},
+			[controlMap.left]: (event) => {
+				event.preventDefault();
+				cycleStratagems("LEFT");
+			},
+			[controlMap.right]: (event) => {
+				event.preventDefault();
+				cycleStratagems("RIGHT");
+			},
 		});
 
 		return () => {
 			unsubscribe();
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [inputCodeIndex, stratagems]);
+	}, [settings, inputCodeIndex, stratagems]);
 
 	return (
 		<div className="container mx-auto flex h-full w-full flex-col items-center gap-4 overflow-hidden py-6 sm:gap-12">
