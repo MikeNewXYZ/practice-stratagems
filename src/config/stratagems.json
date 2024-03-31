@@ -1,0 +1,1152 @@
+{
+  "helldiversOne": [
+    {
+      "name": "Resupply",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "MG-94 Machine Gun",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "MGX-42 Machine Gun",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "UP",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "LAS-98 Laser Cannon",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "AC-22 Dum-Dum*",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Obliterator Grenade Launcher",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "UP",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "M-25 Rumbler*",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "UP",
+        "LEFT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "FLAM-40 Incinerator",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "TOX-13 Avenger*",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "RIGHT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "RL-112 Recoilless Rifle",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "EAT-17",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "MLS-4X Commando*",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "UP",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "AD-334 Guard Dog*",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "UP",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "AD-289 Angel*",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "LEFT",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Resupply Pack",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "DOWN",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "LIFT-850 Jump Pack",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "UP",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "SH-32 Directional Kinetic Shield*",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "RIGHT",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "SH-20 Shield Generator Pack",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "RIGHT",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "REP-80",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "REC-6 Demolisher*",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "UP",
+        "UP"
+      ]
+    },
+    {
+      "name": "EXO-44 Walker Exosuit",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "DOWN",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "EXO-48 Obsidian Exosuit*",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "DOWN",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "EXO-51 Lumberer Exosuit*",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "MC-109 Hammer Motorcycle*",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "DOWN",
+        "LEFT",
+        "LEFT",
+        "UP"
+      ]
+    },
+    {
+      "name": "TD-110 Bastion*",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "DOWN",
+        "LEFT",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "M5 APC",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "DOWN",
+        "LEFT",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "M5-32 HAV",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "DOWN",
+        "LEFT",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Humblebee UAV drone*",
+      "inputCode": [
+        "LEFT",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Distractor Beacon",
+      "inputCode": [
+        "LEFT",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "AT-47 Anti-Tank Emplacement*",
+      "inputCode": [
+        "LEFT",
+        "LEFT",
+        "UP",
+        "UP",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "A/MG-11 Minigun Turret",
+      "inputCode": [
+        "LEFT",
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "A/RX-34 Railcannon Turret",
+      "inputCode": [
+        "LEFT",
+        "DOWN",
+        "UP",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "A/GL-8 Launcher Turret",
+      "inputCode": [
+        "LEFT",
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "A/AC-6 Tesla Tower",
+      "inputCode": [
+        "LEFT",
+        "DOWN",
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "Airdropped Anti-Personnel Mines",
+      "inputCode": [
+        "LEFT",
+        "RIGHT",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "Anti-Personnel Barrier*",
+      "inputCode": [
+        "LEFT",
+        "RIGHT",
+        "DOWN",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Thunderer Smoke Round",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Airdropped Stun Mines",
+      "inputCode": [
+        "LEFT",
+        "RIGHT",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Static Field Conductors",
+      "inputCode": [
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Heavy Airstrike",
+      "inputCode": [
+        "RIGHT",
+        "UP",
+        "DOWN",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "Vindicator Dive Bomb",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Strafing Run",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "UP"
+      ]
+    },
+    {
+      "name": "Incendiary Bombs",
+      "inputCode": [
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Heavy Strafing Run",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "Close Air Support*",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "DOWN",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "Missile Barrage*",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Thunderer Barrage",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "UP",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Sledge Precision Artillery*",
+      "inputCode": [
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "UP",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Orbital Laser Strike",
+      "inputCode": [
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "UP",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "Shredder Missile Strike",
+      "inputCode": [
+        "RIGHT",
+        "LEFT",
+        "RIGHT",
+        "LEFT",
+        "DOWN",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Railcannon Strike",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "DOWN",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "Reinforce",
+      "inputCode": [
+        "UP",
+        "DOWN",
+        "RIGHT",
+        "LEFT",
+        "UP"
+      ]
+    },
+    {
+      "name": "NUX-223 Hellbomb",
+      "inputCode": [
+        "UP",
+        "LEFT",
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "ME-1 Sniffer Metal Detector",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "RIGHT",
+        "UP"
+      ]
+    },
+    {
+      "name": "Emergency Beacon",
+      "inputCode": [
+        "UP",
+        "DOWN",
+        "RIGHT",
+        "UP"
+      ]
+    }
+  ],
+  "helldiversTwo": [
+    {
+      "name": "LIFT-850 Jump Pack",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "UP",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "B-1 Supply Pack",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "AX/LAS-5 \"Guard Dog\" Rover",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "UP",
+        "RIGHT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "SH-20 Ballistic Shield Backpack",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "DOWN",
+        "UP",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "SH-32 Shield Generator Pack",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "RIGHT",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "AX/AR-23 \"Guard Dog\"",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "UP",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "MG-43 Machine Gun",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "APW-1 Anti-Materiel Rifle",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "M-105 Stalwart",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "UP",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "EAT-17 Expendable Anti-tank",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "LEFT",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "GR-8 Recoilless Rifle",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "FLAM-40 Flamethrower",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "UP",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "AC-8 Autocannon",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "RS-422 Railgun",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "FAF-14 SPEAR Launcher",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "UP",
+        "DOWN",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "GL-21 Grenade Launcher",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "UP",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "LAS-98 Laser Cannon",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "ARC-3 Arc Thrower",
+      "inputCode": [
+        "DOWN",
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "LEFT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "LAS-99 Quasar Cannon",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "UP",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Reinforce",
+      "inputCode": [
+        "UP",
+        "DOWN",
+        "RIGHT",
+        "LEFT",
+        "UP"
+      ]
+    },
+    {
+      "name": "SOS Beacon",
+      "inputCode": [
+        "UP",
+        "DOWN",
+        "RIGHT",
+        "UP"
+      ]
+    },
+    {
+      "name": "Resupply",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "NUX-223 Hellbomb",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "SSSD Delivery",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "UP",
+        "UP"
+      ]
+    },
+    {
+      "name": "Seismic Probe",
+      "inputCode": [
+        "UP",
+        "UP",
+        "LEFT",
+        "RIGHT",
+        "DOWN",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Upload Data",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "UP",
+        "UP",
+        "UP"
+      ]
+    },
+    {
+      "name": "Eagle Rearm",
+      "inputCode": [
+        "UP",
+        "UP",
+        "LEFT",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Illumination Flare",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "LEFT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "SEAF Artillery",
+      "inputCode": [
+        "RIGHT",
+        "UP",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Super Earth Flag",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "E/MG-101 HMG Emplacement",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "LEFT",
+        "RIGHT",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "FX-12 Shield Generator Relay",
+      "inputCode": [
+        "DOWN",
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "A/ARC-3 Tesla Tower",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "MD-6 Anti-Personnel Minefield",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "UP",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "MD-I4 Incendiary Mines",
+      "inputCode": [
+        "DOWN",
+        "LEFT",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "A/MG-43 Machine Gun Sentry",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "RIGHT",
+        "UP"
+      ]
+    },
+    {
+      "name": "A/G-16 Gatling Sentry",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "A/M-12 Mortar Sentry",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "A/AC-8 Autocannon Sentry",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "UP",
+        "LEFT",
+        "UP"
+      ]
+    },
+    {
+      "name": "A/MLS-4X Rocket Sentry",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "RIGHT",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "A/M-23 EMS Mortar Sentry",
+      "inputCode": [
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Orbital Gatling Barrage",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "LEFT",
+        "UP",
+        "UP"
+      ]
+    },
+    {
+      "name": "Orbital Airburst Strike",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Orbital 120MM HE Barrage",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "DOWN",
+        "LEFT",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Orbital 380MM HE Barrage",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "UP",
+        "LEFT",
+        "DOWN",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Orbital Walking Barrage",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "RIGHT",
+        "DOWN",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Orbital Laser",
+      "inputCode": [
+        "RIGHT",
+        "DOWN",
+        "UP",
+        "RIGHT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Orbital Railcannon Strike",
+      "inputCode": [
+        "RIGHT",
+        "UP",
+        "DOWN",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Orbital Precision Strike",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "UP"
+      ]
+    },
+    {
+      "name": "Orbital Gas Strike",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Orbital EMS Strike",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "LEFT",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Orbital Smoke Strike",
+      "inputCode": [
+        "RIGHT",
+        "RIGHT",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "Eagle Strafing Run",
+      "inputCode": [
+        "UP",
+        "RIGHT",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Eagle Airstrike",
+      "inputCode": [
+        "UP",
+        "RIGHT",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Eagle Cluster Bomb",
+      "inputCode": [
+        "UP",
+        "RIGHT",
+        "DOWN",
+        "DOWN",
+        "RIGHT"
+      ]
+    },
+    {
+      "name": "Eagle Napalm Airstrike",
+      "inputCode": [
+        "UP",
+        "RIGHT",
+        "DOWN",
+        "UP"
+      ]
+    },
+    {
+      "name": "Eagle Smoke Strike",
+      "inputCode": [
+        "UP",
+        "RIGHT",
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Eagle 110MM Rocket Pods",
+      "inputCode": [
+        "UP",
+        "RIGHT",
+        "UP",
+        "LEFT"
+      ]
+    },
+    {
+      "name": "Eagle 500kg Bomb",
+      "inputCode": [
+        "UP",
+        "RIGHT",
+        "DOWN",
+        "DOWN",
+        "DOWN"
+      ]
+    }
+  ]
+}
