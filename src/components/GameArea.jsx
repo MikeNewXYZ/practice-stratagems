@@ -32,7 +32,7 @@ function GameArea({ stratagems }) {
 }
 
 GameArea.propTypes = {
-	stratagems: PropTypes.arrayOf(PropTypes.object).isRequired,
+	stratagems: PropTypes.array.isRequired,
 };
 
 export default GameArea;

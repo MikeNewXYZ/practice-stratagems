@@ -21,13 +21,12 @@ const randomStratagem = (stratagems) => {
 function App() {
 	const [settings, saveSettings] = useLocalStorage("settings", {
 		general: {
-			stratagems: {
-				helldiversOne: false,
-				helldiversTwo: true,
-				random: false,
-			},
 			radio: false,
 			audio: false,
+		},
+		stratagems: {
+			helldiversOne: false,
+			helldiversTwo: true,
 		},
 		controls: {
 			up: "KeyW",
@@ -41,8 +40,12 @@ function App() {
 	const [stratagems, setStratagems] = useState(
 		[...Array(10)].map(() =>
 			randomStratagem([
-				...stratagemConfig.helldiversOne,
-				...stratagemConfig.helldiversTwo,
+				...(settings.stratagems.helldiversOne
+					? stratagemConfig.helldiversOne
+					: []),
+				...(settings.stratagems.helldiversTwo
+					? stratagemConfig.helldiversTwo
+					: []),
 			]),
 		),
 	);
@@ -81,6 +84,21 @@ function App() {
 			setInputCodeIndex(0);
 			setStratagems(newStratagems);
 		}
+	};
+
+	const refreshStratagems = () => {
+		setStratagems(
+			[...Array(10)].map(() =>
+				randomStratagem([
+					...(settings.stratagems.helldiversOne
+						? stratagemConfig.helldiversOne
+						: []),
+					...(settings.stratagems.helldiversTwo
+						? stratagemConfig.helldiversTwo
+						: []),
+				]),
+			),
+		);
 	};
 
 	useEffect(() => {
@@ -129,7 +147,11 @@ function App() {
 
 	return (
 		<div className="container mx-auto flex h-full w-full flex-col items-center gap-4 overflow-hidden py-6 sm:gap-12">
-			<Header />
+			<Header
+				settings={settings}
+				saveSettings={saveSettings}
+				refreshStratagems={refreshStratagems}
+			/>
 			<GameArea stratagems={stratagems} />
 		</div>
 	);
