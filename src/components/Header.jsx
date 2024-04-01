@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import logo from "../assets/logo.svg";
 import { Icon } from "@iconify/react";
+import { toast } from "react-hot-toast";
+import NotificationToast from "./NotificationToast";
 
 function Header({ settings, saveSettings, refreshStratagems }) {
 	// Modify deeply nested values in a object easily.
@@ -19,6 +21,30 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 		saveSettings(settings);
 	};
 
+	const handleToggleStratagems = (version, otherVersion) => {
+		if (settings.stratagems[otherVersion]) {
+			changeSettings(
+				settings,
+				!settings.stratagems[version],
+				`stratagems.${version}`,
+			);
+			refreshStratagems();
+
+			toast.custom(() => (
+				<NotificationToast
+					heading={`Stratagem ${settings.stratagems[version] ? "enabled" : "disabled"}`}
+				/>
+			));
+		} else {
+			toast.custom(() => (
+				<NotificationToast
+					heading={"COWARD!!!"}
+					subheading={"You can't disable all stratagems"}
+				/>
+			));
+		}
+	};
+
 	return (
 		<header className="flex w-full flex-col items-center justify-center gap-6">
 			<div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-6">
@@ -32,9 +58,22 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 				<div className="flex h-full gap-2 rounded-md bg-stone-800 px-2 text-2xl">
 					<button
 						className="p-2 transition-all duration-500 hover:bg-stone-900"
-						onClick={() =>
-							changeSettings(settings, !settings.general.radio, "general.radio")
-						}
+						onClick={() => {
+							changeSettings(
+								settings,
+								!settings.general.radio,
+								"general.radio",
+							);
+							toast.custom(() => (
+								<NotificationToast
+									heading={`Radio button ${settings.general.radio ? "enabled" : "disabled"}`}
+									subheading={
+										settings.general.radio &&
+										`Hold "${settings.controls.radio}" to use`
+									}
+								/>
+							));
+						}}
 					>
 						<Icon
 							className="transition-all duration-500"
@@ -44,9 +83,18 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 					</button>
 					<button
 						className="p-2 transition-all duration-500 hover:bg-stone-900"
-						onClick={() =>
-							changeSettings(settings, !settings.general.audio, "general.audio")
-						}
+						onClick={() => {
+							changeSettings(
+								settings,
+								!settings.general.audio,
+								"general.audio",
+							);
+							toast.custom(() => (
+								<NotificationToast
+									heading={`Audio ${settings.general.audio ? "enabled" : "disabled"}`}
+								/>
+							));
+						}}
 					>
 						<Icon
 							className="transition-all duration-500"
@@ -56,7 +104,12 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 					</button>
 					<button
 						className="p-2 transition-all duration-500 hover:bg-stone-900"
-						onClick={() => refreshStratagems()}
+						onClick={() => {
+							refreshStratagems();
+							toast.custom(() => (
+								<NotificationToast heading="Stratagems refreshed" />
+							));
+						}}
 					>
 						<Icon icon="ic:baseline-refresh" />
 					</button>
@@ -69,16 +122,9 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 			<div className="flex w-full flex-wrap justify-center gap-2 px-4 font-mono text-sm font-light sm:gap-6 sm:text-xl">
 				<button
 					className="flex items-center justify-center gap-2 transition-opacity duration-500 hover:opacity-50"
-					onClick={() => {
-						if (!settings.stratagems.helldiversTwo) return;
-						changeSettings(
-							settings,
-							!settings.stratagems.helldiversOne,
-							"stratagems.helldiversOne",
-						);
-
-						refreshStratagems();
-					}}
+					onClick={() =>
+						handleToggleStratagems("helldiversOne", "helldiversTwo")
+					}
 				>
 					{settings.stratagems.helldiversOne ? (
 						<Icon icon="ic:baseline-check-box" />
@@ -89,16 +135,9 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 				</button>
 				<button
 					className="flex items-center justify-center gap-2 transition-opacity duration-500 hover:opacity-50"
-					onClick={() => {
-						if (!settings.stratagems.helldiversOne) return;
-						changeSettings(
-							settings,
-							!settings.stratagems.helldiversTwo,
-							"stratagems.helldiversTwo",
-						);
-
-						refreshStratagems();
-					}}
+					onClick={() =>
+						handleToggleStratagems("helldiversTwo", "helldiversOne")
+					}
 				>
 					{settings.stratagems.helldiversTwo ? (
 						<Icon icon="ic:baseline-check-box" />

@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { tinykeys } from "tinykeys";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import stratagemConfig from "./config/stratagems.json";
+import { Toaster, toast } from "react-hot-toast";
 import Header from "./components/Header";
 import GameArea from "./components/GameArea";
+import NotificationToast from "./components/NotificationToast";
 
 const randomStratagem = (stratagems) => {
 	const randomIndex = Math.floor(Math.random() * stratagems.length);
@@ -83,6 +85,9 @@ function App() {
 			}));
 			setInputCodeIndex(0);
 			setStratagems(newStratagems);
+			toast.custom(() => (
+				<NotificationToast heading="Wrong, try again solider!" />
+			));
 		}
 	};
 
@@ -146,14 +151,17 @@ function App() {
 	}, [settings, inputCodeIndex, stratagems]);
 
 	return (
-		<div className="container mx-auto flex h-full w-full flex-col items-center gap-4 overflow-hidden py-6 sm:gap-12">
-			<Header
-				settings={settings}
-				saveSettings={saveSettings}
-				refreshStratagems={refreshStratagems}
-			/>
-			<GameArea stratagems={stratagems} />
-		</div>
+		<>
+			<Toaster position="bottom-center" />
+			<div className="container mx-auto flex h-full w-full flex-col items-center gap-4 overflow-hidden py-6 sm:gap-12">
+				<Header
+					settings={settings}
+					saveSettings={saveSettings}
+					refreshStratagems={refreshStratagems}
+				/>
+				<GameArea stratagems={stratagems} />
+			</div>
+		</>
 	);
 }
 
