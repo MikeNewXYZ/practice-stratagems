@@ -6,6 +6,7 @@ import { Toaster, toast } from "react-hot-toast";
 import Header from "./components/Header";
 import GameArea from "./components/GameArea";
 import NotificationToast from "./components/NotificationToast";
+import inputCodeAudio from "./audio/input-code.wav";
 
 const randomStratagem = (stratagems) => {
 	const randomIndex = Math.floor(Math.random() * stratagems.length);
@@ -52,11 +53,18 @@ function App() {
 		),
 	);
 
+	const playAudio = (path) => {
+		if (!settings.general.audio) return;
+		new Audio(path).play();
+	};
+
 	const cycleStratagems = (inputCode) => {
 		let newStratagems = stratagems;
 
 		// Check if user pressed correct key.
 		if (stratagems[0].inputCode[inputCodeIndex].id === inputCode) {
+			playAudio(inputCodeAudio);
+
 			// Cycle to next stratagem.
 			if (inputCodeIndex >= stratagems[0].inputCode.length - 1) {
 				newStratagems.shift();
@@ -158,6 +166,7 @@ function App() {
 					settings={settings}
 					saveSettings={saveSettings}
 					refreshStratagems={refreshStratagems}
+					playAudio={playAudio}
 				/>
 				<GameArea stratagems={stratagems} />
 			</div>

@@ -3,8 +3,10 @@ import logo from "../assets/logo.svg";
 import { Icon } from "@iconify/react";
 import { toast } from "react-hot-toast";
 import NotificationToast from "./NotificationToast";
+import radioEnabledAudio from "../audio/radio-enabled.wav";
+import radioDisabledAudio from "../audio/radio-disabled.wav";
 
-function Header({ settings, saveSettings, refreshStratagems }) {
+function Header({ settings, saveSettings, refreshStratagems, playAudio }) {
 	// Modify deeply nested values in a object easily.
 	const changeSettings = (settings, value, path) => {
 		let newSettings = settings;
@@ -64,6 +66,7 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 								!settings.general.radio,
 								"general.radio",
 							);
+
 							toast.custom(() => (
 								<NotificationToast
 									heading={`Radio button ${settings.general.radio ? "enabled" : "disabled"}`}
@@ -73,6 +76,10 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 									}
 								/>
 							));
+
+							settings.general.radio
+								? playAudio(radioEnabledAudio)
+								: playAudio(radioDisabledAudio);
 						}}
 					>
 						<Icon
@@ -155,6 +162,7 @@ Header.propTypes = {
 	settings: PropTypes.object.isRequired,
 	saveSettings: PropTypes.func.isRequired,
 	refreshStratagems: PropTypes.func.isRequired,
+	playAudio: PropTypes.func.isRequired,
 };
 
 export default Header;
