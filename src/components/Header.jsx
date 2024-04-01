@@ -3,6 +3,22 @@ import logo from "../assets/logo.svg";
 import { Icon } from "@iconify/react";
 
 function Header({ settings, saveSettings, refreshStratagems }) {
+	// Modify deeply nested values in a object easily.
+	const changeSettings = (settings, value, path) => {
+		let newSettings = settings;
+		path = path.split(".");
+		let index = 0;
+
+		for (index; index < path.length - 1; index++) {
+			newSettings = newSettings[path[index]];
+		}
+
+		newSettings[path[index]] = value;
+
+		// Somehow "settings" is modified after all this, I don't know why but it works.
+		saveSettings(settings);
+	};
+
 	return (
 		<header className="flex w-full flex-col items-center justify-center gap-6">
 			<div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-6">
@@ -17,11 +33,7 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 					<button
 						className="p-2 transition-all duration-500 hover:bg-stone-900"
 						onClick={() =>
-							saveSettings(() => {
-								let newSettings = settings;
-								newSettings.general.radio = !newSettings.general.radio;
-								return newSettings;
-							})
+							changeSettings(settings, !settings.general.radio, "general.radio")
 						}
 					>
 						<Icon
@@ -33,11 +45,7 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 					<button
 						className="p-2 transition-all duration-500 hover:bg-stone-900"
 						onClick={() =>
-							saveSettings(() => {
-								let newSettings = settings;
-								newSettings.general.audio = !newSettings.general.audio;
-								return newSettings;
-							})
+							changeSettings(settings, !settings.general.audio, "general.audio")
 						}
 					>
 						<Icon
@@ -63,12 +71,11 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 					className="flex items-center justify-center gap-2 transition-opacity duration-500 hover:opacity-50"
 					onClick={() => {
 						if (!settings.stratagems.helldiversTwo) return;
-						saveSettings(() => {
-							let newSettings = settings;
-							newSettings.stratagems.helldiversOne =
-								!newSettings.stratagems.helldiversOne;
-							return newSettings;
-						});
+						changeSettings(
+							settings,
+							!settings.stratagems.helldiversOne,
+							"stratagems.helldiversOne",
+						);
 
 						refreshStratagems();
 					}}
@@ -84,12 +91,11 @@ function Header({ settings, saveSettings, refreshStratagems }) {
 					className="flex items-center justify-center gap-2 transition-opacity duration-500 hover:opacity-50"
 					onClick={() => {
 						if (!settings.stratagems.helldiversOne) return;
-						saveSettings(() => {
-							let newSettings = settings;
-							newSettings.stratagems.helldiversTwo =
-								!newSettings.stratagems.helldiversTwo;
-							return newSettings;
-						});
+						changeSettings(
+							settings,
+							!settings.stratagems.helldiversTwo,
+							"stratagems.helldiversTwo",
+						);
 
 						refreshStratagems();
 					}}
