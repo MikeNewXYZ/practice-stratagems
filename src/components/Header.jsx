@@ -6,23 +6,13 @@ import NotificationToast from "./NotificationToast";
 import radioEnabledAudio from "../audio/radio-enabled.wav";
 import radioDisabledAudio from "../audio/radio-disabled.wav";
 
-function Header({ settings, saveSettings, refreshStratagems, playAudio }) {
-	// Modify deeply nested values in a object easily.
-	const changeSettings = (settings, value, path) => {
-		let newSettings = settings;
-		path = path.split(".");
-		let index = 0;
-
-		for (index; index < path.length - 1; index++) {
-			newSettings = newSettings[path[index]];
-		}
-
-		newSettings[path[index]] = value;
-
-		// Somehow "settings" is modified after all this, I don't know why but it works.
-		saveSettings(settings);
-	};
-
+function Header({
+	settings,
+	changeSettings,
+	refreshStratagems,
+	playAudio,
+	setModalActive,
+}) {
 	const handleToggleStratagems = (version, otherVersion) => {
 		if (settings.stratagems[otherVersion]) {
 			changeSettings(
@@ -120,7 +110,10 @@ function Header({ settings, saveSettings, refreshStratagems, playAudio }) {
 					>
 						<Icon icon="ic:baseline-refresh" />
 					</button>
-					<button className="p-2 transition-all duration-500 hover:bg-stone-900">
+					<button
+						className="p-2 transition-all duration-500 hover:bg-stone-900"
+						onClick={() => setModalActive(true)}
+					>
 						<Icon icon="ic:baseline-videogame-asset" />
 					</button>
 				</div>
@@ -160,9 +153,10 @@ function Header({ settings, saveSettings, refreshStratagems, playAudio }) {
 
 Header.propTypes = {
 	settings: PropTypes.object.isRequired,
-	saveSettings: PropTypes.func.isRequired,
+	changeSettings: PropTypes.func.isRequired,
 	refreshStratagems: PropTypes.func.isRequired,
 	playAudio: PropTypes.func.isRequired,
+	setModalActive: PropTypes.func.isRequired,
 };
 
 export default Header;

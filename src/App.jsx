@@ -5,6 +5,7 @@ import stratagemConfig from "./config/stratagems.json";
 import { Toaster, toast } from "react-hot-toast";
 import Header from "./components/Header";
 import GameArea from "./components/GameArea";
+import ControlsModal from "./components/ControlsModal";
 import NotificationToast from "./components/NotificationToast";
 import inputCodeAudio from "./audio/input-code.wav";
 
@@ -52,6 +53,7 @@ function App() {
 			]),
 		),
 	);
+	const [modalActive, setModalActive] = useState(false);
 
 	const playAudio = (path) => {
 		if (!settings.general.audio) return;
@@ -114,6 +116,22 @@ function App() {
 		);
 	};
 
+	// Modify deeply nested values in a object easily.
+	const changeSettings = (settings, value, path) => {
+		let newSettings = settings;
+		path = path.split(".");
+		let index = 0;
+
+		for (index; index < path.length - 1; index++) {
+			newSettings = newSettings[path[index]];
+		}
+
+		newSettings[path[index]] = value;
+
+		// Somehow "settings" is modified after all this, I don't know why but it works.
+		saveSettings(settings);
+	};
+
 	useEffect(() => {
 		// Map controls based on user settings.
 		const { general, controls } = settings;
@@ -160,13 +178,20 @@ function App() {
 
 	return (
 		<>
+			<ControlsModal
+				settings={settings}
+				changeSettings={changeSettings}
+				modalActive={modalActive}
+				closeModal={() => setModalActive(false)}
+			/>
 			<Toaster position="bottom-center" />
 			<div className="container mx-auto flex h-full w-full flex-col items-center gap-4 overflow-hidden py-6 sm:gap-12">
 				<Header
 					settings={settings}
-					saveSettings={saveSettings}
+					changeSettings={changeSettings}
 					refreshStratagems={refreshStratagems}
 					playAudio={playAudio}
+					setModalActive={setModalActive}
 				/>
 				<GameArea stratagems={stratagems} />
 			</div>
