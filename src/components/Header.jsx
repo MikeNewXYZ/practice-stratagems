@@ -38,18 +38,27 @@ function Header({
 	};
 
 	return (
-		<header className="flex w-full flex-col items-center justify-center gap-6">
-			<div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-6">
-				<div className="flex items-center gap-2 ">
-					<img className="aspect-square h-8" src={logo} />
-					<h1 className="text-center font-mono text-xl font-black sm:text-3xl">
-						PRACTICE STRATAGEMS
-					</h1>
+		<header className="flex w-full flex-col items-center justify-center gap-2 sm:gap-6">
+			<div className="flex w-full flex-col items-center justify-center gap-4 p-2 md:flex-row md:gap-6">
+				<div className="flex items-center gap-4">
+					<img className="aspect-square h-10" src={logo} />
+					<div>
+						<h1 className="text-center font-mono text-xl font-black sm:text-2xl">
+							PRACTICE STRATAGEMS
+						</h1>
+						<a
+							className="text-sm font-extralight"
+							href="https://github.com/MikeNewXYZ"
+							target="_blank"
+						>
+							by MikeNewXYZ
+						</a>
+					</div>
 				</div>
 
-				<div className="flex h-full gap-2 rounded-md bg-stone-800 px-2 text-2xl">
+				<div className="flex h-12 w-full justify-evenly gap-2 rounded-md bg-stone-800 px-2 text-2xl sm:w-auto">
 					<button
-						className="p-2 transition-all duration-500 hover:bg-stone-900"
+						className="flex aspect-square max-h-full items-center justify-center transition-all duration-500 hover:bg-stone-900"
 						onClick={() => {
 							changeSettings(
 								settings,
@@ -79,7 +88,7 @@ function Header({
 						/>
 					</button>
 					<button
-						className="p-2 transition-all duration-500 hover:bg-stone-900"
+						className="flex aspect-square max-h-full items-center justify-center transition-all duration-500 hover:bg-stone-900"
 						onClick={() => {
 							changeSettings(
 								settings,
@@ -100,7 +109,7 @@ function Header({
 						/>
 					</button>
 					<button
-						className="p-2 transition-all duration-500 hover:bg-stone-900"
+						className="flex aspect-square max-h-full items-center justify-center transition-all duration-500 hover:bg-stone-900"
 						onClick={() => {
 							refreshStratagems();
 							toast.custom(() => (
@@ -111,7 +120,7 @@ function Header({
 						<Icon icon="ic:baseline-refresh" />
 					</button>
 					<button
-						className="p-2 transition-all duration-500 hover:bg-stone-900"
+						className="flex aspect-square max-h-full items-center justify-center transition-all duration-500 hover:bg-stone-900"
 						onClick={() => setModalActive(true)}
 					>
 						<Icon icon="ic:baseline-videogame-asset" />
